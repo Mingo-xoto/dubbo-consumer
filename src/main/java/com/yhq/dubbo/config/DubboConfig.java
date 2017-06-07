@@ -7,11 +7,8 @@ import org.springframework.context.annotation.Import;
 
 import com.alibaba.dubbo.config.ApplicationConfig;
 import com.alibaba.dubbo.config.ProtocolConfig;
-import com.alibaba.dubbo.config.ReferenceConfig;
 import com.alibaba.dubbo.config.RegistryConfig;
 import com.alibaba.dubbo.config.spring.AnnotationBean;
-
-import cn.paywe.fos.api.service.IMerchantService;
 
 /**
  * 由dubbo引入springmvc的上下文配置，
@@ -69,15 +66,17 @@ public class DubboConfig {
 		return protocol;
 	}
 
-//	@Bean
-//	public ReferenceConfig<IMerchantService> referenceConfig() {
-//		ReferenceConfig<IMerchantService> reference = new ReferenceConfig<IMerchantService>(); // 此实例很重，封装了与注册中心的连接以及与提供者的连接，请自行缓存，否则可能造成内存和连接泄漏
-//		reference.setApplication(application());
-//		reference.setRegistry(registry()); // 多个注册中心可以用setRegistries()
-//		reference.setInterface(IMerchantService.class);
-//		IMerchantService merchantService = reference.get();
-//		System.out.println("哈哈："+merchantService.getTargetDetailsById(""));
-//		return reference;
-//	}
+	// @Bean
+	// public ReferenceConfig<IMerchantService> referenceConfig() {
+	// ReferenceConfig<IMerchantService> reference = new
+	// ReferenceConfig<IMerchantService>(); //
+	// 此实例很重，封装了与注册中心的连接以及与提供者的连接，请自行缓存，否则可能造成内存和连接泄漏
+	// reference.setApplication(application());
+	// reference.setRegistry(registry()); // 多个注册中心可以用setRegistries()
+	// reference.setInterface(IMerchantService.class);
+	// IMerchantService merchantService = reference.get();
+	// System.out.println("哈哈："+merchantService.getTargetDetailsById(""));
+	// return reference;
+	// }
 
 }
