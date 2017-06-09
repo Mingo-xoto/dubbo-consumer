@@ -41,8 +41,9 @@ public class DubboConfig {
 	 */
 	@Bean
 	public RegistryConfig registry() {
-		// RegistryConfig registry = new RegistryConfig("10.1.21.4:2181");
-		RegistryConfig registry = new RegistryConfig("127.0.0.1:2180,127.0.0.1:2181,127.0.0.1:2182");
+		RegistryConfig registry = new RegistryConfig("10.1.21.4:2181");
+		// RegistryConfig registry = new
+		// RegistryConfig("127.0.0.1:2180,127.0.0.1:2181,127.0.0.1:2182");
 		registry.setProtocol("zookeeper");
 		return registry;
 	}
